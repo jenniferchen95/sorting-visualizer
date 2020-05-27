@@ -95,7 +95,6 @@ export default class SortingComponent extends React.Component {
 
   selectionSort() {
     const highlightArr = selectionSortHighlight(this.state.array)
-    // console.log(highlightArr)
     for (let i = 0; i < highlightArr.length; i++) {
       const arrBars = document.getElementsByClassName('bar')
       const [swap, barOne, barTwo] = highlightArr[i]
@@ -116,10 +115,6 @@ export default class SortingComponent extends React.Component {
           arrBars[smallestIdx].style.height = `${currIdxHeight}px`
         }, i * 10)
       }
-      // else if (swap === 'new') {
-      //   const [swap, barOne] = highlightArr[i]
-      //   arrBars[barOne].style.backgroundColor = 'red'
-      // }
       arrBars[arrBars.length-1].style.backgroundColor = 'turquoise'
     }
   }
